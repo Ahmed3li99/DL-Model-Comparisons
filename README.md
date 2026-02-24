@@ -1,108 +1,81 @@
-\# Sequence \& Image Models (CNN / RNN / LSTM / GRU)
-
-
+# Sequence & Image Models (CNN / RNN / LSTM / GRU)
 
 This repository contains hands-on deep learning notebooks covering:
 
-\- \*\*CNN\*\* for image-related tasks
-
-\- \*\*RNN\*\* for sequence modeling
-
-\- \*\*LSTM / GRU\*\* for improved sequence learning and long-term dependencies
-
-
+- **CNN** for image classification tasks
+- **RNN** for sequence modeling (sentiment analysis, text prediction)
+- **LSTM / GRU** for improved sequence learning and long-term dependencies
 
 The goal is to understand how these architectures work and compare their behavior on different types of data.
 
+---
 
+## Tech Stack
 
-\---
+- Python 3
+- Jupyter Notebook
+- TensorFlow / Keras
+- NumPy, Pandas, Matplotlib
 
+---
 
+## Repository Structure
 
-\## Tech Stack
+```
+Sequence-Image-Models/
+├── notebooks/
+│   ├── 01_cnn_session.ipynb   — CNN notebook (CIFAR-10 & MNIST)
+│   ├── 02_rnn_session.ipynb   — RNN notebook (IMDB sentiment + text prediction + translator)
+│   └── 03_lstm_gru.ipynb      — LSTM & GRU notebook (time-series forecasting)
+└── requirements.txt
+```
 
-\- Python
+---
 
-\- Jupyter Notebook
+## Notebooks Overview
 
-\- (TensorFlow/Keras PyTorch) ← 
+### 01 — CNN (Convolutional Neural Network)
+- Dataset: **CIFAR-10** (60,000 color images, 10 classes) and **MNIST** (handwritten digits)
+- Compares a fully-connected **DNN** vs a **CNN** on image classification
+- Key concepts: Conv2D, MaxPooling, Flatten, Dropout
 
+### 02 — RNN (Recurrent Neural Network)
+- Dataset: **IMDB** movie reviews (binary sentiment analysis)
+- Projects: next-word prediction and a mini English → Spanish translator (Seq2Seq with LSTM)
+- Key concepts: Embedding, SimpleRNN, sequence padding, tokenization
 
+### 03 — LSTM & GRU
+- Dataset: **Daily Minimum Temperatures** (time-series regression)
+- Trains an LSTM and a GRU to forecast temperature values
+- Key concepts: sequence windows, LSTM vs GRU comparison, validation loss curves
 
-\---
+---
 
+## How to Run
 
+1. Clone the repository:
 
-\## Repository Structure
+```bash
+git clone https://github.com/Ahmed3li99/Sequence-Image-Models.git
+cd Sequence-Image-Models
+```
 
+2. Install dependencies:
 
+```bash
+pip install -r requirements.txt
+```
 
-\- `notebooks/`
+3. Start Jupyter:
 
-&#x20; - `01\_cnn\_session.ipynb` — CNN notebook
-
-&#x20; - `02\_rnn\_session.ipynb` — RNN notebook
-
-&#x20; - `03\_lstm\_gru.ipynb` — LSTM \& GRU notebook
-
-\- `images/` — add plots/screenshots of results (optional but recommended)
-
-
-
-\---
-
-
-
-\## How to Run
-
-
-
-1\. Clone the repository:
-
-&#x20; 
-
-&#x20;  git clone https://github.com/A7med3li99/Sequence-Image-Models.git
-
-&#x20;  cd Sequence-Image-Models
-
-Install dependencies (basic):
-
-
-
-pip install numpy pandas matplotlib jupyter
-
-If you used a deep learning framework, install one of the following (choose what you used):
-
-
-
-pip install tensorflow
-
-or
-
-
-
-pip install torch torchvision
-
-Start Jupyter:
-
-
-
+```bash
 jupyter notebook
+```
 
-Open the notebooks inside notebooks/ and run all cells.
+4. Open any notebook inside `notebooks/` and run all cells.
 
+---
 
+## Author
 
-Notes (to improve portfolio presentation)
-
-Add 1–2 screenshots of training curves or outputs inside images/
-
-
-
-Mention dataset name(s) inside the notebook or here in the README
-
-
-
-Author
-
+Ahmed Ali
